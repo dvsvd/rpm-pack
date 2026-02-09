@@ -5,7 +5,7 @@ Summary: Brisk-menu in RPM package
 
 License: GPL-2.0 License
 URL: https://github.com/getsolus/brisk-menu
-Source0: %{_sourcedir}/brisk-menu-0.6.2.tar.xz
+Source0: %{_sourcedir}/%{name}-%{version}.tar.xz
 
 BuildRequires: meson >= 0.40
 BuildRequires: ninja-build
@@ -52,5 +52,5 @@ find %{buildroot} -name ".debug" -delete
 
 
 %changelog
-* Wed Feb 04 2026 Your Name <you@example.com>
+* Wed Feb 04 2026 Your Name <you@example.com> - %{version}
 - 
