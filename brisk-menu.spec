@@ -20,6 +20,8 @@ Requires: mate-panel
 Requires: mate-menus
 Requires: gtk3 >= 3.18
 
+Provides: brisk-menu
+
 %description
 brisk-menu is a modern and efficient menu designed to improve the MATE Desktop Environment with modern, first-class options.
 The purpose of this project is to provide a usable menu as seen in other desktops without the bloat and performance issues.
@@ -31,7 +33,7 @@ brisk-menu - это современное и эффективное меню, �
 brisk-menu нечувствительна к дистрибутиву. Также, мы будем рады всякой обратной связи о проблемах с совместимостью.
 
 %prep
-%setup -a 0
+%setup -q -a 0
 
 %build
 %meson --buildtype=release
@@ -51,7 +53,7 @@ find %{buildroot} -name ".debug" -delete
 
 %postun
 rm -rf %{_libdir}/mate-panel
-rm -rf %{_docdir}//mate-panel
+rm -rf %{_docdir}/mate-panel
 rm -rf %{_datadir}/mate-panel
  
 
