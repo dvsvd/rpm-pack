@@ -49,7 +49,11 @@ find %{buildroot} -name ".debug" -delete
 %license LICENSE.CC-BY-SA-4.0
 %doc README.md
 
-
+%postun
+rm -rf %{_libdir}/mate-panel
+rm -rf %{_docdir}//mate-panel
+rm -rf %{_datadir}/mate-panel
+ 
 
 %changelog
 * Wed Feb 04 2026 Your Name <you@example.com> - %{version}
